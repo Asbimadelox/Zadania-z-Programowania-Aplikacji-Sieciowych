@@ -1,0 +1,63 @@
+Wydobywanie danych
+	
+	Poniżej znajduje się pełny zapis datagramu UDP w postaci szesnastkowej.
+
+	68 00 55 6f 00 24 ef fd 70 72 6f 67 72 61
+
+	6d 6d 69 6e 67 20 69 6e 20 70 79 74 68 6f
+
+	6e 20 69 73 20 66 75 6e
+
+	Wiedząc, że w zapisie szesnastkowym jedna cyfra reprezentuje 4 bity, 
+	oraz znając strukturę datagramu UDP, napisz program, który z powyższego 
+	datagramu UDP wydobędzie: numer źródłowego portu, numer docelowego portu, 
+	dane przeformatowane na tekst.
+
+
+Klient HTTP - treść strony
+
+	Pod adresem httpbin.org naporcie TCP o numerze 80 działa serwero bsługujący
+	 protokół HTTP w wersji 1.1. Pod odnośnikiem /html udostępnia prostą stronę 
+	HTML. Napisz program klienta, który połączy się z serwerem, a następnie 
+	pobierze treść strony i zapisze ją na dysku jako plik z rozszerzeniem *.html. 
+	Spreparuj żądanie HTTP tak, aby serwer myślał, że żądanie przyszło od 
+	przeglądarki Safari 7.0.3. (Potrzebne nagłówki HTTP: HOST: httpbin.org, 
+	User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_3) 
+	AppleWebKit/537.75.14 (KHTML, like Gecko) Version/7.0.3 Safari/7046A194A). 
+	Strona: http://www.useragentstring.com/.
+
+Opis
+	
+	Opisz grupy kodów odpowiedzi HTTP.
+
+Klient HTTP - obrazek
+
+	Pod adresem httpbin.org na porcie TCP o numerze 80 działa serwer 
+	obsługujący protokół HTTP w wersji 1.1. Pod odnośnikiem /image/png 
+	udostępnia obrazek. Napisz program klienta, który połączy się z serwerem,
+	 a następnie pobierze obrazek i zapisze go na dysku. (Potrzebne nagłówki 
+	HTTP: HOST: httpbin.org).
+
+Klient HTTP - formularze
+
+	Pod adresem httpbin.org na porcie TCP o numerze 80 działa serwer obsługujący 
+	protokół HTTP w wersji 1.1. Pod odnośnikiem forms/post udostępnia formularz 
+	z polami do wypełnienia.
+
+	Napisz program klienta, który połączy się z serwerem, a następnie uzupełni 
+	formularz danymi pobranymi od użytkownika, a następnie prześle go do serwera 
+	i odbierze odpowiedź.
+
+	Aby sprawdzić, jak wygląda żądanie HTTP potrzebne do wypełnienia i wysłania 
+	formularza: 
+
+    		jakie nagłówki HTTP są wykorzystywane, 
+    		jak wygląda ciało zapytania,
+
+	podsłuchaj komunikację z serwerem za pomocą Wiresharka, tj. uruchom 
+	przeglądarkę oraz Wiresharka; uzupełnij i zatwierdź formularz ręcznie za 
+	pomocą przeglądarki, a następnie sprawdź pakiety podsłuchane podczas 
+	komunikacji z serwerem httpbin.org. 
+
+	Możesz użyć ﬁltrów Wiresharka: http.request oraz http.response 
+	(http.request || http.response). 
