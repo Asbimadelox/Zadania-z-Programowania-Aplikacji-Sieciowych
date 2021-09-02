@@ -1,0 +1,64 @@
+Wejściówka - tajny pandemiczny serwer informacji
+
+Napisz serwer (TCP) symulujący pracę serwera FTP, który:
+
+- przyjmuje w wiadomości hasło
+
+- jeśli hasło jest poprawne z tym który przechowuje serwer zwraca losowy (wysoki) numer portu, na którym będzie nasłuchiwał na połączenie i po połączeniu z tym portem prześle tajną wiadomość.
+
+Napisz klienta (TCP) FTP, który pobiera z tajną wiadomość z zaleceniami odnośnie pandemii koronawirusa. 
+
+Oba programy (klient i serwer) mają działać synchronicznie, czyli obsługiwać jedno połączenie w danym momencie (bez wykorzystywania wątków).
+
+Przykład:
+Klient wysyła hasło: "Velvet"
+Serwer odpowiada: 5001
+Klient łączy się z portem 5001 i pobiera wiadomość: "Ostatnie sztuki w żabce przy Instytucie Informatyki"
+
+
+
+
+Analiza datagramu
+
+Poniżej znajduje się pełny zapis datagramu UDP w postaci szesnastkowej.
+
+ed 74 0b 55 00 24 ef fd 70 72 6f 67 72 61
+
+6d 6d 69 6e 67 20 69 6e 20 70 79 74 68 6f
+
+6e 20 69 73 20 66 75 6e
+
+Wiedząc, że w zapisie szesnastkowym jedna cyfra reprezentuje 4 bity, oraz znając strukturę datagramu UDP, napisz program, który z powyższego datagramu UDP wydobędzie: numer źródłowego portu, numer docelowego portu, dane (ile bajtów w tym pakiecie zajmują dane?)
+
+
+
+Analiza segmentu TCP
+
+Poniżej znajduje się pełny zapis segmentu TCP w postaci szesnastkowej (pole opcji ma 12 bajtów):
+
+0b 54 89 8b 1f 9a 18 ec bb b1 64 f2 80 18 
+00 e3 67 71 00 00 01 01 08 0a 02 c1 a4 ee 
+00 1a 4c ee 68 65 6c 6c 6f 20 3a 29
+
+Wiedząc, że w zapisie szesnastkowym jedna cyfra reprezentuje 4 bity, oraz znając strukturę segmentu TCP, napisz program, który z powyższego segmentu TCP wydobędzie: numer źródłowego portu , numer docelowego portu, dane
+
+
+
+Analiza pakietu IP
+
+Poniżej znajduje się pełny zapis pakietu IP w postaci szesnastkowej (bez pola opcji IP, jeśli protokół to TCP, pole opcji TCP ma 12 bajtów):
+
+45 00 00 4e f7 fa 40 00 38 06 9d 33 d4 b6 18 1b
+c0 a8 00 02 0b 54 b9 a6 fb f9 3c 57 c1 0a 06 c1
+80 18 00 e3 ce 9c 00 00 01 01 08 0a 03 a6 eb 01
+00 0b f8 e5 6e 65 74 77 6f 72 6b 20 70 72 6f 67
+72 61 6d 6d 69 6e 67 20 69 73 20 66 75 6e
+
+Wiedząc, że w zapisie szesnastkowym jedna cyfra reprezentuje 4 bity, oraz znając strukturę pakietu IP (tu IP/TCP):
+
+Napisz program, który z powyższego pakietu IP wydobędzie: wersję protokołu, źródłowy adres IP, docelowy adres IP, typ protokołu warstwy wyższej 
+
+    numer protokołu TCP w polu Protocol nagłówka IPv4 to 6 (0x06) 
+    numer protokołu UDP w polu Protocol nagłówka IPv4 to 17 (0x11))
+
+Oraz, po określeniu typu protokołu (TCP/UDP) dodatkowo wydobędzie z pakietu: numer źródłowego portu,numer docelowego portu, dane.
