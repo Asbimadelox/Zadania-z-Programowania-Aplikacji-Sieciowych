@@ -1,0 +1,34 @@
+Serwery pocztowe
+
+Slowloris
+
+Slowloris, czyli Slow HTTP Headers DoS Attak o nazwie Slowloris, dzięki 
+wykorzystaniu pewnych koncepcji protokołu HTTP oraz sposobu obsługi żądań 
+serwerów WWW, potraﬁ całkowicie je sparaliżować w przeciągu kilku sekund. 
+Atak polega na utworzeniu dużej liczby gniazd, a następnie dosyłania w powolny 
+sposób danych częściowych żądań HTTP, co w końcu skutkuje wyczerpaniem puli
+ wolnych wątków obsługujących żądania HTTP.
+
+W klasycznym żądaniu, np. wykorzystującym metodę HTTP GET, do serwera wysyłana jest 
+linia żądania, nagłówki oraz pusta linia CRLF oznaczająca koniec nagłówków. Atak
+ Slowloris polega na wysyłaniu dużej liczby dodatkowych nagłówków, przykładowo X-a:
+ b, które będą sukcesywnie dochodzić do atakowanego serwera dopiero po pewnym czasie.
+ Podsumowując, atak działa następująco:
+
+1. Budowane są gniazda TCP (im więcej, tym lepiej, domyślnie 1000) 
+sock = socket(AF_INET, SOCK_STREAM)
+
+2. Następuje podłączenie do serwera i wysyłanie podstawowych nagłówków 
+sock.connect(server), sock.send(’...’),
+
+3. Wysyłany jest nagłówek X-a: b \r\n sock.send(’...’)
+
+4. Odczekujemy pewien czas (domyślnie 100 sekund) time.sleep(100)
+
+5. Wysyłamy ponownie nagłówek X-a: b \r\n sock.send(’...’)
+
+6. Powtarzamy do skutku kroki 4. i 5. dla każdego połączenia,
+ ewentualnie dobudowujemy gniazda do zamkniętych połączeń
+
+Znając założenia ataku Slowloris, napisz program klienta - atakującego,
+ który wykona atak Slowloris na serwer WWW np. mattkozlowski.pl
