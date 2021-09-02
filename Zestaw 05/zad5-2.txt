@@ -1,0 +1,20 @@
+telnet interia.pl 587
+
+EHLO interia.pl
+
+MAIL FROM: damian.sub@interia.pl
+
+RCPT TO: Damianex.wp@wp.pl
+
+DATA
+Subject: Testowanie telneta
+
+Kagerou Project.
+
+.
+
+QUIT
+
+
+
+
