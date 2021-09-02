@@ -1,0 +1,70 @@
+Architektura Klient Server
+
+Program sprawdzający porty
+	Napisz program - skaner portów, który dla danego serwera
+	 będzie sprawdzał jakie porty są otwarte przy użyciu protokołu TCP. 
+	Program powinien akceptować adres w postaci adresu IP oraz hostname.
+
+Program klient-serwer do liczenia potęgi
+
+	Napisz program klient-serwer (TCP), w którym:
+
+	- serwer odbiera od klienta liczbę i odsyła w odpowiedzi kwadrat tej liczby
+
+	- klient pyta użytkownika o liczbę, wysyła do serwera i odbiera odpowiedź, którą wyświetla
+
+Program klient-serwer jako server czasowy
+
+	Napisz program klient-serwer (TCP), w którym:
+
+	- serwer odbiera od klienta dowolną wiadomość i odsyła aktualną datę i czas
+
+	- klient wysyła do serwera wiadomość i pobiera aktualną datę i czas
+
+Program klient-serwer sprawdzający imię
+
+	Napisz program klient-serwer (TCP lub UDP), w którym:
+
+	- klient wysyła imię danej osoby
+
+	- serwer odpowiada jakiej płci zeńskiej jest osoba o danym imieniu
+
+Program klient-serwer przesyłający złożone struktury danych
+
+	Napisz program klient-serwer, w którym:
+
+	- klient wysyła strukturę złożoną z liczby, napisu oraz liczby zmiennoprzecinkowej
+
+	- serwer odbiera strukturę złożoną oraz odpowiada iż się udało
+
+
+PROGRAM KLIENT - SERWER Z PRÓBKOWANIEM DANYCH
+
+	Funkcje recv i send nie gwarantują wysłania / odbioru wszystkich danych w jednej 
+	chwili. W końcu to połączenie strumieniowe, czyli przesyłany jest bajt po bajcie. 
+	Rozważmy funkcję recv. Przykładowo, 100 bajtów może zostać wysłane co kilka sekund 
+	po 10 bajtów albo od razu w całości. Oznacza to, iż jeśli używamy gniazd TCP, musimy 
+	odbierać dane, dopóki nie mamy pewności, że odebraliśmy odpowiednią ich ilość.
+
+	Napisz:
+	- klient TCP, który pobiera od użytkownika treść wiadomości i następnie wysyła ją do
+ 	serwera
+	- serwer, pobiera po wiadomość po 1B od klienta, który następnie skleja wiadomość i 
+	wyświetla ją na konsoli.
+
+Program FTP
+
+	Napisz serwer (TCP) symulujący pracę serwera FTP, który:
+
+	- przyjmuje w wiadomości nazwę pliku, o który odpytuje klient,
+
+	- jeśli plik istnieje, zwraca losowy (wysoki) numer portu, na którym będzie nasłuchiwał
+	 na połączenie i po połączeniu z tym portem zwróci dane i zakończy oba połączenia
+
+	Napisz klienta (TCP) FTP, który pobiera z serwera FTP wybrany plik. Informacje o serwerze 
+	oraz o pliku mogą być przekazywane jako parametr do programu lub program może o nie odpytywać 
+	użytkownika interaktywnie.
+
+	Oba programy (klient i serwer) mają działać synchronicznie, czyli obsługiwać jedno połączenie 
+	w danym momencie (bez wykorzystywania wątków).
+
