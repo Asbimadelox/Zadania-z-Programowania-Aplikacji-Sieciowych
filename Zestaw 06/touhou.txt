@@ -1,0 +1,22 @@
+Touhou: Ultimate Project by Asbimadelox
+
+1.	Połączenie przede wszystkim JRPG-a i VN-a.
+a.	VN
+i.	Więcej niż statyczne obrazy
+2.	Na silniku RPG Maker MV/MZ z pluginami do nich (na JAvascripcie)
+3.	 Autorska grafika (później)
+4.	Autorska muzyka (później)
+5.	Wielowątkowa, autorska fabuła
+a.	różne zakończenia
+b.	wybory molarne i ich wpływ na grę
+i.	brak „czarnobiałego świata”
+c.	Liczne nawiązania i easter-eggi zarówno do oficjalnych odsłon, na licencji, jak i w pełni autorskich
+d.	Możliwość wątków miłosnych
+i.	NIE z każdą bohaterką
+e.	Wzorowanie się na:
+6.	Wierność uniwersum Touhou
+a.	Nowe elementy w fabule i świecie, które jednocześnie nie ubliżają uniwersum i nie oddzierają ich z klimatu
+i.	Konkretni ludzie z wioski mający określone charaktery
+ii.	Kwestia (nie)śmiertelności
+b.	Bohaterki zgodnie z ich ustalonymi charakterami.
+7.	Obecność

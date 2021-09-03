@@ -1,0 +1,13 @@
+1. Serwer oczekuje na połączenie
+
+2. Klient łączy się z serwerem.
+
+3. Klient wysyła nazwę pliku.
+
+4. Serwer przyjmuje i wykorzystuję nazwę pliku.
+
+5. Klient wysyła określony plik
+
+6. Serwer zapisuje dany plik.
+
+7. Kroki 3-6 mogą się powtarzać, dopóki klient nie zdecyduje się wyjść (Nic nie wpisując na nazwę plików).
