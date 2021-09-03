@@ -1,0 +1,31 @@
+WŁASNA IMPLEMENTACJA PROTOKOLOW
+
+Własny protokół uploadu plików
+Zaprojektuj i zaimplementuj własny protokół uploadu plików tekstowych na zdalny serwer. Napisz program serwera, który działając pod adresem 127.0.0.1 oraz 
+na określonym porcie TCP, będzie komunikował się z klientem, odbierał od niego pliki, i zapisywał na dysku. Napisz program klienta, który połączy się
+z przygotowanym serwerem, i wyśle do niego plik. Zarówno klient, jak i serwer, powinni komunikować się przy pomocy zaprojektowanego protokołu.
+
+Statki
+Opracuj protokół gry w statki, na który będą się składać wiadomości przesyłane między dwoma graczami wraz z ich formatem oraz kody błędów. Uwzględnij 
+w nim przebieg całej gry między klientem oraz serwerem, którzy są graczami.
+
+Proces umieszczania statków na mapie jest poza zakresem protokołu. Protokół zakłada, że obie strony mają już rozłożone statki 
+na mapie.
+
+Obsługa błędów
+Opracuj listę błędów (w tym kod błędu), które mogą wystąpić w protokole z poprzedniego zadania. Zmodyfikuj protokół oraz kod serwera i klienta, aby wykrywali 
+błędy i zwracali o nich informację (w tym kod).
+Aplikacja klienta powinna przedstawiać użytkownikowi komunikat opisujący błąd, który wystąpił.
+
+Własny protokół pobierania plików graficznych
+Zaprojektuj i zaimplementuj własny protokół pobierania plików graficznych ze zdalnego serwera. Napisz program klient-serwer, w którym klient połączy się z serwerem 
+a następnie odbierze (zapisze na dysku) wysyłany przez serwer plik graﬁczny. Serwer powinien za kazdym razem wysyłać inny plik. Przykładowy ﬂow protokołu powinien 
+wyglądać następująco
+ 
+W przypadku odebrania od klienta niewłaściwego polecenia (nie zdeﬁniowanego w protokole), serwer powinien odpowiedzieć wiadomością ERROR \r\n.
+
+GRA W STATKI
+Zaimplementuj protokół gry w statki z wejściówki.
+
+W protokole możesz założyć, że ułożenie statków na mapie jest realizowane lokalnie, 
+przed realizacją protokołu.
