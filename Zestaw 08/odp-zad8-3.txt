@@ -1,0 +1,4 @@
+Haker może tutaj łatwo się włamać do serwera przez przejmowanie sesji, gdyż identyfikator sesji zaczyna
+się od 1 i jego zmiana polega na prostej inkrementacji.
+ Tak więc haker tutaj używa metody "brute force", gdzie do skutku próbuje zgadnąć numer sesji użytkownika
+poprzez sprawdzanie wszystkich możliwych kombinacji.
