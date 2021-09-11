@@ -1,0 +1,2 @@
+Owa podatność polega na uzyskaniu dostępu do zawartości całego serwera zamiast tylko
+do określonego podkatalogu przedewszystkim przez użycie ciągu znaków "../" w zapytaniu.
