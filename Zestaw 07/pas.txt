@@ -1,0 +1,12 @@
+POST / HTTP/1.1\r\n
+Host: ocsp.sca1b.amazontrust.com\r\n
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:91.0) Gecko/20100101 Firefox/91.0\r\n
+Accept: */*\r\n
+Accept-Language: pl,en-US;q=0.7,en;q=0.3\r\n
+Accept-Encoding: gzip, deflate\r\n
+Content-Type: application/oscp-request\r\n
+Content-Length: 83\r\n
+Connection: keep-alive\r\n
+Pragma: no-cache\r\n
+Cache-Control: no-cache\r\n
+\r\n
