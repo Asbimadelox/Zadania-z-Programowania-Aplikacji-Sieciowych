@@ -1,0 +1,4 @@
+Podatność polega na tym, iż na podstawie wygenerowanego kodu można ustalić adres MAC danego komputera, a co
+za tym idze, również parę innych parametrów, by w ostateczności mieć do sprawdzenia zaledwie kilkanaście tysięcy kombinacji.
+
+Podatność można wyeleminować poprzez skorzystanie z 4 wersji tego algorytmu, którego wylosowana wartość ma być całkowicie losowa.
