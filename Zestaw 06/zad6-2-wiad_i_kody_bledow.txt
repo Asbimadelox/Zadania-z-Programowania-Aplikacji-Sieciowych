@@ -1,0 +1,30 @@
+Działanie protokołu:
+
+1.Uruchamianie serwera
+2.Uruchamianie klienta
+3.Ustanowienie połączenia
+4. Przygotowanie gotowych plansz
+5. Ruch klienta
+6.Oczekiwanie na ruch serwera
+7.Ruch Serwera
+8.Oczekiwanie na ruch klienta
+9. Punkty 5-9 powtarzają się, dopóki któryś z graczy nie straci wszystkich statków
+10. Informacja o końcu pojedynku
+11. Pytanie o powtórkę. W zależności od odpowiedzi wraca się do punktu 4 lub wyłącza się oba stanowiska pracy.
+
+
+Wiadomości przesyłane między graczami:
+	"Trafiony"
+	"Pudło"
+
+
+
+Kody błędów:
+
+ValueError: Wartość wykracza poza planszę lub jest nieprawidłowa
+
+InvalidError: Nieodpowiedni port
+
+AlreadyError: Gracz chce trafić to pole, które zostało trafione już wcześ niej
+
+ConnectionError: Utrata połączenia
