@@ -11,10 +11,10 @@ ip= input("Wpisz IP: ") #'192.168.1.17'
 #port_list = [20, 30, 80, 8080, 31, 32, 33, 475]
 
 for port in range(0,65535):
-    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    wynik = s.connect_ex((ip, port))
-    
-    if wynik == 0:
+    try:
+        s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        s.bind((ip, port))
+    except:
         print('Port: '+str(port)+" otwarty")
         
     s.close()
@@ -27,10 +27,10 @@ for port in range(0,65535):
 host = input("Wpisz hostname tutaj: ") #socket.gethostname()
 
 for port in range(0,65535):
-    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    wynik = s.connect_ex((host, port))
-    
-    if wynik == 0:
+    try:
+        s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        s.bind((host, port))
+    except:
         print('Port: '+str(port)+" otwarty")
         
     s.close()
