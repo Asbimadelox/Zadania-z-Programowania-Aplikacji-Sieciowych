@@ -9,7 +9,7 @@ import socket
 
  
 
-address = "192.168.1.17"
+address = input("Wpisz adres IP: ")#= "192.168.1.17"
 print(address)
 host = socket.gethostbyaddr(address)
 host = host[0]

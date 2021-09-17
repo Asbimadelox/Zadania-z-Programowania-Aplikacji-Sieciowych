@@ -6,12 +6,9 @@ Created on Sun Aug  8 12:17:28 2021
 """
 import socket
 
+#hostname = socket.gethostname()
 
-
-
-hostname = socket.gethostname()
-
-local_ip = socket.gethostbyname(hostname)
+local_ip = input("Wpisz dany adres IP")
 
 
 print(local_ip)
