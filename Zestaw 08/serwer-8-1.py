@@ -49,7 +49,7 @@ def obsluga(klient):
             
         
         
-host = '192.168.1.17'
+host = 'localhost'
 port = 50000
 
 sock = socket.socket()#socket.AF_INET, socket.SOCK_STREAM

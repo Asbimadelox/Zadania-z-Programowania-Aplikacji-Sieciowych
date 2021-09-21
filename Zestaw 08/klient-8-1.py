@@ -8,7 +8,7 @@ Created on Fri Sep 10 14:29:49 2021
 import socket
 import ssl
 
-addr = '127.0.0.1'
+addr = 'localhost'
 port = 50000
 server_cert = 'server.crt'
 client_cert = 'client.crt'
@@ -19,7 +19,7 @@ context.load_cert_chain(certfile=client_cert, keyfile=client_key)
 
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 conn = context.wrap_socket(sock, server_side=False, server_hostname=addr)
-conn.connect((socket.gethostname(), port))
+conn.connect(('localhost', port))
 
 
 
